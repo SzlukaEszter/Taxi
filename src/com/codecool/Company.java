@@ -17,12 +17,14 @@ public class Company implements phoneBookManager{
     private int totalPassenger;
     private int budget;
     private int nameGenerator;
+    private List<String> phoneBook;
 
     public Company() {
         this.totalPassenger = 0;
         this.budget = 0;
         this.nameGenerator = 1;
         initCars(3);
+        this.phoneBook = new ArrayList<>();
     }
 
     public int getTotalPassenger() {
@@ -62,15 +64,16 @@ public class Company implements phoneBookManager{
     private Driver hireDriver() {
         Driver d = new Driver("DeNiro" + nameGenerator, this::getPhoneBook);
         nameGenerator++;
-        System.out.println(d.getName());
-        // TODO save number to phonebook
+
+        // TODO save number to phonebook Done
+        phoneBook.add(d.getMobileNumber());
         drivers.add(d);
         return d;
     }
     @Override
     public List<String> getPhoneBook(){
-        // TODO
-        return null;
+        // TODO done
+        return phoneBook;
     }
 
     private void buyCar(){
@@ -79,6 +82,9 @@ public class Company implements phoneBookManager{
 
     private void setSelfDrivingCarsOperational(boolean operational){
         // TODO
+        for (SelfDrivingCar selfDrivingCar : selfDrivingCars) {
+            selfDrivingCar.
+        }
     }
 
     public int getRidesForWeeks(int weeks) {
