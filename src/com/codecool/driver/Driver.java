@@ -33,7 +33,9 @@ public class Driver implements PassangerInfo {
     }
 
     private int getRandomInRange(int min, int max){
-        return random.nextInt((max-min)+1)+min;
+        int generated = random.nextInt((max-min)+1)+min;
+        System.out.println("min: " + min + ", max: " + max + ", random: " + generated);
+        return generated;
     }
 
     private Experience getRandomExperience(){

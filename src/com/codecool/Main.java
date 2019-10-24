@@ -10,13 +10,7 @@ public class Main {
 	    int totalPassangers = company.getRidesForWeeks(52);
         System.out.println(totalPassangers);
 
-        testIncreaseCost();
+
     }
 
-    private static void testIncreaseCost() {
-        GasolineCar gasolineCar = new GasolineCar(new Driver());
-        for (int i = 0; i < 52; i++) {
-            gasolineCar.increaseCost();
-        }
-    }
 }
