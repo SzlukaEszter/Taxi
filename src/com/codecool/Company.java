@@ -8,6 +8,7 @@ import com.codecool.driver.Driver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Company implements phoneBookManager{
 
@@ -17,14 +18,13 @@ public class Company implements phoneBookManager{
     private int totalPassenger;
     private int budget;
     private int nameGenerator;
-    private List<String> phoneBook;
+    private List<String> phoneBook = new ArrayList<>();
 
     public Company() {
         this.totalPassenger = 0;
         this.budget = 0;
         this.nameGenerator = 1;
         initCars(3);
-        this.phoneBook = new ArrayList<>();
     }
 
     public int getTotalPassenger() {
@@ -77,13 +77,21 @@ public class Company implements phoneBookManager{
     }
 
     private void buyCar(){
-        // TODO
+        // TODO Done
+        if (budget >= SelfDrivingCar.COST){
+            if (new Random().nextBoolean() == true) {
+                initSelfDrivingCar();
+            }
+            else {
+                initElectricCar();
+            }
+        }
     }
 
     private void setSelfDrivingCarsOperational(boolean operational){
         // TODO
         for (SelfDrivingCar selfDrivingCar : selfDrivingCars) {
-            selfDrivingCar.
+            selfDrivingCar.setOperational(operational);
         }
     }
 

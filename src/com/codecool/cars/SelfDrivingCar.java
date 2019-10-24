@@ -3,6 +3,22 @@ package com.codecool.cars;
 import com.codecool.cars.Car;
 
 public class SelfDrivingCar extends Car {
+    public static final int COST = 740;
+    private boolean isOperational;
+
+    public SelfDrivingCar() {
+        super();
+        this.isOperational = true;
+    }
+
+    public boolean isOperational() {
+        return isOperational;
+    }
+
+    public void setOperational(boolean operational) {
+        isOperational = operational;
+    }
+
     @Override
     public int getCost() {
         return 0;
@@ -14,8 +30,13 @@ public class SelfDrivingCar extends Car {
     }
 
     @Override
-    public void spendWeek() {
+    public void beforeSpendWeek() {
 
+    }
+
+    @Override
+    public void afterSpendWeek() {
+        setOperational(true);
     }
 
     @Override

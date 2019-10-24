@@ -4,7 +4,7 @@ import com.codecool.driver.PassangerInfo;
 
 public class ElectricCar extends DrivableCar {
 
-    private static final int  COST = 400;
+    public static final int  COST = 400;
     PassangerInfo driver;
 
     public ElectricCar(PassangerInfo driver) {
@@ -17,7 +17,12 @@ public class ElectricCar extends DrivableCar {
     }
 
     @Override
-    public void spendWeek() {}
+    public void beforeSpendWeek() {}
+
+    @Override
+    public void afterSpendWeek() {
+
+    }
 
     @Override
     public int getIncome() {

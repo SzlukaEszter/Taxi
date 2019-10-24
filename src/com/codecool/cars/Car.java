@@ -7,6 +7,7 @@ public abstract class Car {
 
     public abstract int getCost();
     public abstract int getPassangersForWeek();
-    public abstract void spendWeek();
+    public abstract void beforeSpendWeek();
+    public abstract void afterSpendWeek();
     public abstract int getIncome();
 }
