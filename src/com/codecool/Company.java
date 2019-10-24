@@ -1,5 +1,11 @@
 package com.codecool;
 
+import com.codecool.cars.Car;
+import com.codecool.cars.ElectricCar;
+import com.codecool.cars.GasolineCar;
+import com.codecool.cars.SelfDrivingCar;
+import com.codecool.driver.Driver;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,6 @@
-package com.codecool;
+package com.codecool.cars;
+
+import com.codecool.driver.Driver;
 
 public abstract class DrivableCar extends Car {
 
