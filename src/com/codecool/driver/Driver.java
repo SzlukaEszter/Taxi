@@ -11,7 +11,7 @@ public class Driver implements PassangerInfo {
     private List<String> phoneBook;
     private Experience experience;
     private com.codecool.phoneBookManager phoneBookManager;
-    private Random random;
+    private Random random = new Random();
 
 
 
@@ -23,8 +23,6 @@ public class Driver implements PassangerInfo {
         this.salary = 0;
         this.phoneBook = phoneBookManager.getPhoneBook();
         this.experience = getRandomExperience();
-        this.random = new Random();
-
     }
 
     private String generateMobileNumber(){
@@ -34,7 +32,6 @@ public class Driver implements PassangerInfo {
 
     private int getRandomInRange(int min, int max){
         int generated = random.nextInt((max-min)+1)+min;
-        System.out.println("min: " + min + ", max: " + max + ", random: " + generated);
         return generated;
     }
 
