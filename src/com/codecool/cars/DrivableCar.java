@@ -1,12 +1,13 @@
 package com.codecool.cars;
 
 import com.codecool.driver.Driver;
+import com.codecool.driver.PassangerInfo;
 
 public abstract class DrivableCar extends Car {
 
-    protected Driver driver; // TODO interface type
+    protected PassangerInfo driver; // TODO interface type
 
-    public DrivableCar(Driver driver) {
+    public DrivableCar(PassangerInfo driver) {
         this.driver = driver;
     }
 }

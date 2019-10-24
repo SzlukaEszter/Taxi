@@ -1,6 +1,6 @@
 package com.codecool.cars;
 
-import com.codecool.driver.Driver;
+import com.codecool.driver.PassangerInfo;
 
 public class GasolineCar extends DrivableCar {
 
@@ -8,7 +8,7 @@ public class GasolineCar extends DrivableCar {
     private static final int COST = 350;
 
 
-    public GasolineCar(Driver driver) {
+    public GasolineCar(PassangerInfo driver) {
         super(driver);
     }
 

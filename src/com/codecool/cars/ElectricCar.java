@@ -1,11 +1,11 @@
 package com.codecool.cars;
 
-import com.codecool.driver.Driver;
+import com.codecool.driver.PassangerInfo;
 
 public class ElectricCar extends DrivableCar {
 
-    public ElectricCar(Driver d) {
-        super(d);
+    public ElectricCar(PassangerInfo driver) {
+        super(driver);
     }
 
     @Override
