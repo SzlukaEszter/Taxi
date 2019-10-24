@@ -57,12 +57,27 @@ public class Company {
 
     private Driver hireDriver() {
         Driver d = new Driver();
+        // TODO save number to phonebook
         drivers.add(d);
         return d;
     }
 
     public List<String> getPhoneBook(){
+        // TODO
         return null;
+    }
+
+    private void buyCar(){
+        // TODO
+    }
+
+    private void setSelfDrivingCarsOperational(boolean operational){
+        // TODO
+    }
+
+    public int getRidesForWeeks(int weeks) {
+        // TODO
+        return 0;
     }
 
 }

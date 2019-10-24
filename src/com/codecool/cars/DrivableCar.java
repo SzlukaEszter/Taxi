@@ -4,7 +4,7 @@ import com.codecool.driver.Driver;
 
 public abstract class DrivableCar extends Car {
 
-    Driver driver;
+    protected Driver driver;
 
     public DrivableCar(Driver driver) {
         this.driver = driver;
