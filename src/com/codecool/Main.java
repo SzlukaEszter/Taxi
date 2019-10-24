@@ -15,7 +15,7 @@ public class Main {
 
     private static void testIncreaseCost() {
         GasolineCar gasolineCar = new GasolineCar(new Driver());
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 52; i++) {
             gasolineCar.increaseCost();
         }
     }
