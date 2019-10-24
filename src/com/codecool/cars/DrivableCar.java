@@ -10,4 +10,9 @@ public abstract class DrivableCar extends Car {
     public DrivableCar(PassangerInfo driver) {
         this.driver = driver;
     }
+
+    @Override
+    public int getPassangersForWeek() {
+        return driver.getPassangersPerWeek();
+    }
 }

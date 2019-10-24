@@ -22,10 +22,7 @@ public class GasolineCar extends DrivableCar {
         return COST;
     }
 
-    @Override
-    public int getPassangersForWeek() {
-        return driver.getPassangersPerWeek();
-    }
+
 
     @Override
     public void spendWeek() {
