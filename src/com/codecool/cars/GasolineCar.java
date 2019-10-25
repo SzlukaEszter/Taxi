@@ -14,14 +14,7 @@ public class GasolineCar extends DrivableCar {
 
     public void increaseCost() {
         maintenanceCost += Math.round((float)maintenanceCost * 0.1f);
-        System.out.println("current maintenance cost: " + maintenanceCost);
     }
-
-    @Override
-    public void beforeSpendWeek() {
-
-    }
-
 
     @Override
     public void afterSpendWeek() {

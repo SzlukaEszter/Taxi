@@ -12,9 +12,6 @@ public class ElectricCar extends DrivableCar {
     }
 
     @Override
-    public void beforeSpendWeek() {}
-
-    @Override
     public void afterSpendWeek() {
 
     }

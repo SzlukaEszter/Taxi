@@ -25,10 +25,6 @@ public class SelfDrivingCar extends Car {
         return passangersPerWeek;
     }
 
-    @Override
-    public void beforeSpendWeek() {
-
-    }
 
     @Override
     public void afterSpendWeek() {

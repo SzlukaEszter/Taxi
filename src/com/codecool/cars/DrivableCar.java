@@ -5,7 +5,7 @@ import com.codecool.driver.PassangerInfo;
 
 public abstract class DrivableCar extends Car {
 
-    protected PassangerInfo driver; // TODO interface type Done
+    protected PassangerInfo driver;
 
     public DrivableCar(PassangerInfo driver) {
         this.driver = driver;

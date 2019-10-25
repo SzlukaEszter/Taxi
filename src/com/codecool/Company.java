@@ -64,20 +64,16 @@ public class Company implements phoneBookManager{
     private Driver hireDriver() {
         Driver d = new Driver("DeNiro" + nameGenerator, this::getPhoneBook);
         nameGenerator++;
-
-        // TODO save number to phonebook Done
         phoneBook.add(d.getMobileNumber());
         drivers.add(d);
         return d;
     }
     @Override
     public List<String> getPhoneBook(){
-        // TODO done
         return phoneBook;
     }
 
     private void buyCar(){
-        // TODO Done
         if (budget >= SelfDrivingCar.COST){
             if (new Random().nextBoolean() == true) {
                 setSelfDrivingCarsOperational(false);
@@ -92,7 +88,6 @@ public class Company implements phoneBookManager{
     }
 
     private void setSelfDrivingCarsOperational(boolean operational){
-        // TODO Done
         for (SelfDrivingCar selfDrivingCar : selfDrivingCars) {
             selfDrivingCar.setOperational(operational);
         }
@@ -102,20 +97,17 @@ public class Company implements phoneBookManager{
         buyCar();
         int ridesPerWeek = 0;
         for (Car car : cars) {
-            car.beforeSpendWeek();
             ridesPerWeek += car.getPassangersForWeek();
             budget += car.getIncome();
             car.afterSpendWeek();
         }
-        System.out.println( "Rides: " + ridesPerWeek);
-        System.out.println("Budget: " + budget);
-        System.out.println("Cars " + cars.size());
+        System.out.println( "Rides: " + ridesPerWeek + " Budget: " + budget + " Cars " + cars.size());
+        System.out.println();
         totalPassenger += ridesPerWeek;
     }
 
 
     public void rideForWeeks(int weeks) {
-        //TODO refactor done
         for (int i = 0; i < weeks; i++) {
             System.out.println("Week: " + i);
             spendWeek();
