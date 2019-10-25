@@ -18,11 +18,6 @@ public class GasolineCar extends DrivableCar {
     }
 
     @Override
-    public int getCost() {
-        return COST;
-    }
-
-    @Override
     public void beforeSpendWeek() {
 
     }

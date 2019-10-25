@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 	    Company company = new Company();
 	    int totalPassangers = company.getRidesForWeeks(52);
-        System.out.println(totalPassangers);
+        System.out.println("Passangers deliverd in a year: " + totalPassangers);
 
 
     }

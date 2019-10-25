@@ -5,7 +5,6 @@ import java.util.UUID;
 public abstract class Car {
     protected UUID id = UUID.randomUUID();
 
-    public abstract int getCost();
     public abstract int getPassangersForWeek();
     public abstract void beforeSpendWeek();
     public abstract void afterSpendWeek();

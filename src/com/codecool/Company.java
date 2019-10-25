@@ -43,14 +43,14 @@ public class Company implements phoneBookManager{
     private void initGasolineCar() {
         Driver d = hireDriver();
         GasolineCar gc = new GasolineCar(d);
-        d.setSalary(gc.getCost());
+        d.setSalary(GasolineCar.COST);
         cars.add(gc);
     }
 
     private void initElectricCar() {
         Driver d = hireDriver();
         ElectricCar ec = new ElectricCar(d);
-        d.setSalary(ec.getCost());
+        d.setSalary(ElectricCar.COST);
         cars.add(ec);
 
     }
@@ -99,6 +99,7 @@ public class Company implements phoneBookManager{
     }
 
     public int getRidesForWeeks(int weeks) {
+        //TODO refactor
         int totalRides = 0;
         for (int i = 0; i < weeks; i++) {
             for (Car car : cars) {
