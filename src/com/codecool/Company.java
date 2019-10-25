@@ -98,25 +98,28 @@ public class Company implements phoneBookManager{
         }
     }
 
-    public int getRidesForWeeks(int weeks) {
-        //TODO refactor
-        int totalRides = 0;
-        for (int i = 0; i < weeks; i++) {
-            buyCar();
-            int ridesPerWeek = 0;
-            for (Car car : cars) {
-                car.beforeSpendWeek();
-                ridesPerWeek += car.getPassangersForWeek();
-                budget += car.getIncome();
-                car.afterSpendWeek();
-            }
-            System.out.println("Week: " + i);
-            System.out.println( "Rides: " + ridesPerWeek);
-            System.out.println("Budget: " + budget);
-            System.out.println("Cars " + cars.size());
-            totalRides += ridesPerWeek;
+    private void spendWeek() {
+        buyCar();
+        int ridesPerWeek = 0;
+        for (Car car : cars) {
+            car.beforeSpendWeek();
+            ridesPerWeek += car.getPassangersForWeek();
+            budget += car.getIncome();
+            car.afterSpendWeek();
         }
-        return totalRides;
+        System.out.println( "Rides: " + ridesPerWeek);
+        System.out.println("Budget: " + budget);
+        System.out.println("Cars " + cars.size());
+        totalPassenger += ridesPerWeek;
+    }
+
+
+    public void rideForWeeks(int weeks) {
+        //TODO refactor done
+        for (int i = 0; i < weeks; i++) {
+            System.out.println("Week: " + i);
+            spendWeek();
+        }
     }
 
 }
