@@ -20,11 +20,11 @@ public class Company implements phoneBookManager{
     private int nameGenerator;
     private List<String> phoneBook = new ArrayList<>();
 
-    public Company() {
+    public Company(int numberOfCars) {
         this.totalPassenger = 0;
         this.budget = 0;
         this.nameGenerator = 1;
-        initCars(3);
+        initCars(numberOfCars);
     }
 
     public int getTotalPassenger() {
