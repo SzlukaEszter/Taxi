@@ -102,12 +102,19 @@ public class Company implements phoneBookManager{
         //TODO refactor
         int totalRides = 0;
         for (int i = 0; i < weeks; i++) {
+            buyCar();
+            int ridesPerWeek = 0;
             for (Car car : cars) {
                 car.beforeSpendWeek();
-                totalRides += car.getPassangersForWeek();
+                ridesPerWeek += car.getPassangersForWeek();
                 budget += car.getIncome();
                 car.afterSpendWeek();
             }
+            System.out.println("Week: " + i);
+            System.out.println( "Rides: " + ridesPerWeek);
+            System.out.println("Budget: " + budget);
+            System.out.println("Cars " + cars.size());
+            totalRides += ridesPerWeek;
         }
         return totalRides;
     }

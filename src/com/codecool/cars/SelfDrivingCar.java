@@ -5,6 +5,7 @@ import com.codecool.cars.Car;
 public class SelfDrivingCar extends Car {
     public static final int COST = 740;
     private boolean isOperational;
+    private final int passangersPerWeek = 70;
 
     public SelfDrivingCar() {
         super();
@@ -21,7 +22,7 @@ public class SelfDrivingCar extends Car {
 
     @Override
     public int getPassangersForWeek() {
-        return 0;
+        return passangersPerWeek;
     }
 
     @Override
@@ -36,6 +37,6 @@ public class SelfDrivingCar extends Car {
 
     @Override
     public int getIncome() {
-        return 0;
+        return passangersPerWeek;
     }
 }
