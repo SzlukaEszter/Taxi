@@ -80,6 +80,7 @@ public class Company implements phoneBookManager{
         // TODO Done
         if (budget >= SelfDrivingCar.COST){
             if (new Random().nextBoolean() == true) {
+                setSelfDrivingCarsOperational(false);
                 initSelfDrivingCar();
                 budget -= SelfDrivingCar.COST;
             }
@@ -98,8 +99,16 @@ public class Company implements phoneBookManager{
     }
 
     public int getRidesForWeeks(int weeks) {
-        // TODO
-        return 0;
+        int totalRides = 0;
+        for (int i = 0; i < weeks; i++) {
+            for (Car car : cars) {
+                car.beforeSpendWeek();
+                totalRides += car.getPassangersForWeek();
+                budget += car.getIncome();
+                car.afterSpendWeek();
+            }
+        }
+        return totalRides;
     }
 
 }
