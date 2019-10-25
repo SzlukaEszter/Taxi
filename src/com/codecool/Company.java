@@ -92,7 +92,7 @@ public class Company implements phoneBookManager{
     }
 
     private void setSelfDrivingCarsOperational(boolean operational){
-        // TODO
+        // TODO Done
         for (SelfDrivingCar selfDrivingCar : selfDrivingCars) {
             selfDrivingCar.setOperational(operational);
         }
