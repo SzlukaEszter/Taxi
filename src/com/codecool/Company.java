@@ -81,9 +81,11 @@ public class Company implements phoneBookManager{
         if (budget >= SelfDrivingCar.COST){
             if (new Random().nextBoolean() == true) {
                 initSelfDrivingCar();
+                budget -= SelfDrivingCar.COST;
             }
             else {
                 initElectricCar();
+                budget -= ElectricCar.COST;
             }
         }
     }
